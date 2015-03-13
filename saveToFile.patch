@@ -1,0 +1,22 @@
+[1;33mdiff --git a/./src_audit_tools.py b/./src_audit_tools_toFile.py[m
+[1;33mold mode 100755[m
+[1;33mnew mode 100644[m
+[1;33mindex 43e2350..1b33794[m
+[1;33m--- a/./src_audit_tools.py[m
+[1;33m+++ b/./src_audit_tools_toFile.py[m
+[1;35m@@ -51,9 +51,9 @@[m [mclass CopyWithLineNumbersCommand(sublime_plugin.TextCommand):[m
+        return self.view.rowcol(point)[0] + 1[m
+    [m
+    def save_notes(self, path, notes):[m
+        [31m#fh[m[32mfh[m = open(path + "/notes.md", "a")
+        [31m#data_out[m[32mdata_out[m =  notes
+        [31m#notes.split('\n')
+[m
+[31m        #fh.write(data_out)
+[m
+[31m        #return fh.close()[m[32mnotes.split('\n')
+[m
+[32m        fh.write(data_out)[m
+        return [32mfh.close()
+[m
+[32m        #return[m sublime.set_clipboard(notes)
